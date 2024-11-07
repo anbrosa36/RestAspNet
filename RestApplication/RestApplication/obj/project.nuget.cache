@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "ltPKTIyk83BzW/UW8taAxdi0pJyTXEGDBVJp1vwgUi1FdS8zGy6G1oBbw7NLhQKm5fMk0uBfFRJRTJi9HV2F8w==",
+  "dgSpecHash": "O1i9WQECE/+HQytxnjk/1hxmhIoEDvo4wBe74Z7ivwHDm6Lu7tgIn46eMH7kBV1X4nLVWxTfdu275nIvVvTB4w==",
   "success": true,
   "projectFilePath": "C:\\Users\\anbrosa\\Documents\\Projetos\\RestAspNet\\RestAspNet\\RestApplication\\RestApplication\\RestApplication.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\anbrosa\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\anbrosa\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
+    "C:\\Users\\anbrosa\\.nuget\\packages\\microsoft.aspnetcore.mvc.versioning\\5.1.0\\microsoft.aspnetcore.mvc.versioning.5.1.0.nupkg.sha512",
     "C:\\Users\\anbrosa\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\anbrosa\\.nuget\\packages\\microsoft.data.sqlclient\\5.2.2\\microsoft.data.sqlclient.5.2.2.nupkg.sha512",
