@@ -1,12 +1,12 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using RestApplication.Model.Base;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace RestApplication.Model
 {
     [Table("Persons")]
-    public class Person
+    public class Person : BaseEntity
     {
-        [Column("PersonID")]
-        public int Id { get; set; }
+        
         [Column("FirstName")]
         public string FirstName { get; set; }
         [Column("LastName")]

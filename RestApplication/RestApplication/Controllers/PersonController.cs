@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using RestApplication.Model;
 using RestApplication.Business;
+using RestApplication.Data.VO;
 
 namespace RestApplication.Controllers
 {
@@ -36,14 +37,14 @@ namespace RestApplication.Controllers
         }
 
         [HttpPost]
-        public IActionResult Create([FromBody] Person person) 
+        public IActionResult Create([FromBody] PersonVO person) 
         {
             if (person == null) return BadRequest();
             return Ok(_personBusiness.Create(person));    
         }
 
         [HttpPut]
-        public IActionResult Update([FromBody] Person person)
+        public IActionResult Update([FromBody] PersonVO person)
         {
             if (person == null) return BadRequest();
             return Ok(_personBusiness.Update(person));

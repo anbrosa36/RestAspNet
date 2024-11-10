@@ -1,13 +1,14 @@
-﻿using RestApplication.Model;
+﻿using RestApplication.Data.VO;
+using RestApplication.Model;
 
 namespace RestApplication.Business
 {
     public interface IBookBusiness
     {
-        Book Create(Book book);
-        Book FindById(int id);
-        List<Book> FindAll();
-        Book Update(Book book);
+        BookVO Create(BookVO book);
+        BookVO FindById(int id);
+        List<BookVO> FindAll();
+        BookVO Update(BookVO book);
         void Delete(int id);
     }
 }
