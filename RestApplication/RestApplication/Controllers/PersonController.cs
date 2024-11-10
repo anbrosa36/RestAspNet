@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using RestApplication.Model;
 using RestApplication.Business;
 using RestApplication.Data.VO;
+using RestApplication.Hypermedia.Filters;
 
 namespace RestApplication.Controllers
 {
@@ -21,6 +22,7 @@ namespace RestApplication.Controllers
         }
 
         [HttpGet]
+        [TypeFilter(typeof(HyperMediaFilter))]
         public IActionResult Get()
         {
 
@@ -28,6 +30,7 @@ namespace RestApplication.Controllers
         }
 
         [HttpGet("{id}")]
+        [TypeFilter(typeof(HyperMediaFilter))]
         public IActionResult GetById(int id)
         {
             var person = _personBusiness.FindById(id);
@@ -37,6 +40,7 @@ namespace RestApplication.Controllers
         }
 
         [HttpPost]
+        [TypeFilter(typeof(HyperMediaFilter))]
         public IActionResult Create([FromBody] PersonVO person) 
         {
             if (person == null) return BadRequest();
@@ -44,13 +48,14 @@ namespace RestApplication.Controllers
         }
 
         [HttpPut]
+        [TypeFilter(typeof(HyperMediaFilter))]
         public IActionResult Update([FromBody] PersonVO person)
         {
             if (person == null) return BadRequest();
             return Ok(_personBusiness.Update(person));
         }
 
-        [HttpDelete("{id}")]
+        [HttpDelete("{id}")]        
         public IActionResult Excluir(int id)
         {
             _personBusiness.Delete(id);

@@ -1,8 +1,10 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using RestApplication.Hypermedia;
+using RestApplication.Hypermedia.Abstract;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace RestApplication.Data.VO
 {
-    public class PersonVO
+    public class PersonVO : ISupportsHyperMedia
     {
         public int Id { get; set; }
 
@@ -13,5 +15,6 @@ namespace RestApplication.Data.VO
         public string Address { get; set; }
         
         public string Gender { get; set; }
+        public List<HyperMediaLink> Links { get ; set ; } = new List<HyperMediaLink>();
     }
 }

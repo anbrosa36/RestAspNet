@@ -1,8 +1,10 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using RestApplication.Hypermedia;
+using RestApplication.Hypermedia.Abstract;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace RestApplication.Data.VO
 {
-    public class BookVO
+    public class BookVO : ISupportsHyperMedia
     {
         public int Id { get; set; }
 
@@ -16,5 +18,7 @@ namespace RestApplication.Data.VO
 
         
         public string Title { get; set; }
+
+        public List<HyperMediaLink> Links { get; set; } = new List<HyperMediaLink>();
     }
 }
