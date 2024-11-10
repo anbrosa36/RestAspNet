@@ -5,6 +5,7 @@ using RestApplication.Business.Implematations;
 using RestApplication.Repository;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using RestApplication.Repository.Generic;
+using Microsoft.Net.Http.Headers;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,6 +16,14 @@ builder.Services.AddControllers();
 //Connection Data Base
 var connection = builder.Configuration["BancoConexao:ConnectionString"];
 builder.Services.AddDbContext<BancoContext>(options => options.UseSqlServer(connection));
+
+//Serealização XML e Json
+builder.Services.AddMvc(options =>
+{
+    options.RespectBrowserAcceptHeader = true;
+    options.FormatterMappings.SetMediaTypeMappingForFormat("xml", MediaTypeHeaderValue.Parse("application/xml"));
+    options.FormatterMappings.SetMediaTypeMappingForFormat("json", MediaTypeHeaderValue.Parse("application/json"));
+}).AddXmlSerializerFormatters();
 
 //Versioning Api
 builder.Services.AddApiVersioning();
